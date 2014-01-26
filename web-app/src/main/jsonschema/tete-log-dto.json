@@ -1,0 +1,12 @@
+{
+    "description": "A tété.out log",
+    "type": "object",
+    "properties": {
+        "id": { "type": "integer" },
+        "begin": { "type": "string", "format": "date-time", "required": true },
+        "end": { "type": "string", "format": "date-time", "required": true },
+        "durationSeconds": { "type": "integer", "required": true },
+        "mainLeft":{ "type": "boolean", "required": true },
+        "someOther": { "type": "boolean", "required": true }
+    }
+}

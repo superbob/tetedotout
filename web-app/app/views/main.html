@@ -1,0 +1,121 @@
+<div class="row">
+    <div class="col-xs-12 col-md-8 col-md-offset-2">
+        <div class="alert alert-info">
+            <strong>Dernière tété {{ moment(lastTeteLog.end).fromNow() }}</strong> sur le sein <strong>{{ lastTeteLog.mainLeft ? 'gauche' : 'droit' }}</strong>
+            pendant <strong>{{ moment.duration(lastTeteLog.durationSeconds, 'seconds').humanize() }}</strong><br>
+            <!--
+                            <span class="glyphicon glyphicon-time"></span> xx:yy <span
+                                class="glyphicon glyphicon-ok-sign"></span><span class="glyphicon glyphicon-minus-sign"></span>
+                            <span class="glyphicon glyphicon-repeat"></span> 10'
+            -->
+        </div>
+    </div>
+</div>
+<div class="row">
+    <!--<div class="col-xs-12 col-sm-4 col-sm-offset-2 pagination-centered">
+        <p>
+            <button type="button" class="btn btn-primary btn-lg center-block">Démarrer tété</button>
+        </p>
+    </div>
+    <div class="col-xs-12 col-sm-4">-->
+    <div class="col-xs-12 col-sm-4 col-sm-offset-4">
+        <p>
+            <button type="button" class="btn btn-info btn-lg center-block" data-toggle="modal" data-target="#recordLogModal">Enregistrer tété</button>
+        </p>
+    </div>
+</div>
+<!-- Modal -->
+<div class="modal fade" id="recordLogModal" tabindex="-1" role="dialog" aria-labelledby="recordLogModalLabel" aria-hidden="true">
+    <div class="modal-dialog">
+        <div class="modal-content">
+            <form name="recordLog" class="form-horizontal" role="form" ng-submit="submit()">
+                <div class="modal-header">
+                    <button type="button" class="close" data-dismiss="modal" aria-hidden="true">&times;</button>
+                    <h4 class="modal-title" id="recordLogModalLabel">Enregistrer tété</h4>
+                </div>
+                <div class="modal-body">
+                    <div class="form-group">
+                        <label for="beginDate" class="col-sm-2 control-label">Debut</label>
+                        <div class="col-sm-7">
+                            <input type="date" class="form-control" id="beginDate" ng-model="recordLog.beginDate">
+                        </div>
+                        <div class="col-sm-3">
+                            <input type="time" class="form-control" id="beginTime" step="1" ng-model="recordLog.beginTime">
+                        </div>
+                    </div>
+                    <div class="form-group">
+                        <label for="endDate" class="col-sm-2 control-label">Fin</label>
+                        <div class="col-sm-7">
+                            <input type="date" class="form-control" id="endDate" ng-model="recordLog.endDate">
+                        </div>
+                        <div class="col-sm-3">
+                            <input type="time" class="form-control" id="endTime" step="1" ng-model="recordLog.endTime">
+                        </div>
+                    </div>
+                    <div class="form-group">
+                        <label for="duration" class="col-sm-2 control-label">Durée</label>
+                        <div class="col-sm-10">
+                            <!--<input type="time" class="form-control" id="duration" step="1" ng-model="recordLog.durationTime">-->
+                            <input type="number" class="form-control" id="duration" ng-model="recordLog.durationMinutes">
+                        </div>
+                    </div>
+                    <div class="form-group">
+                        <label class="col-sm-2 control-label">Sein</label>
+                        <div class="col-sm-10">
+                            <label class="radio-inline">
+                                <input type="radio" name="mainLeft" id="mainLeftTrue" value="true" ng-model="recordLog.mainLeft"> Gauche
+                            </label>
+                            <label class="radio-inline">
+                                <input type="radio" name="mainLeft" id="mainLeftFalse" value="false" ng-model="recordLog.mainLeft"> Droit
+                            </label>
+                        </div>
+                    </div>
+                    <div class="form-group">
+                        <div class="col-sm-10 col-sm-offset-2">
+                            <div class="checkbox">
+                                <label>
+                                    <input type="checkbox" id="someOther" ng-model="recordLog.someOther">
+                                    + Un peu de l'autre sein
+                                </label>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="modal-footer">
+                    <button type="button" class="btn btn-default" data-dismiss="modal">Fermer</button>
+                    <button type="submit" class="btn btn-primary">Enregistrer</button>
+                </div>
+            </form>
+        </div><!-- /.modal-content -->
+    </div><!-- /.modal-dialog -->
+</div><!-- /.modal -->
+<div class="row">
+    <div class="col-xs-12 col-md-8 col-md-offset-2">
+        <div class="panel panel-default">
+            <!-- Default panel contents -->
+            <div class="panel-heading">
+                <h3 class="panel-title">Dernières tétés</h3>
+            </div>
+
+            <!-- Table -->
+            <table class="table">
+                <thead>
+                <tr>
+                    <th>Début</th>
+                    <th>Fin</th>
+                    <th>Durée</th>
+                    <th>Sein</th>
+                </tr>
+                </thead>
+                <tbody>
+                <tr ng-repeat="tetelog in tetelogs">
+                    <td>{{tetelog.begin | date:'medium'}}</td>
+                    <td>{{tetelog.end | date:'mediumTime'}}</td>
+                    <td>{{ moment.duration(tetelog.durationSeconds, 'seconds').humanize() }}</td>
+                    <td>{{breastInfo(tetelog.mainLeft, tetelog.someOther)}}</td>
+                </tr>
+                </tbody>
+            </table>
+        </div>
+    </div>
+</div>
