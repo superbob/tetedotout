@@ -38,7 +38,7 @@ You must have a working recent installation of :
  * node.js/npm
  * Yeoman/Bower/Grunt
 
-### Steps :
+### Steps
 
  1. Clone the repo
 
