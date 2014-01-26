@@ -6,8 +6,8 @@ A Google App Engine web app to record and see the last breastfeeds.
 Introduction
 ------------
 
-I'm a father since 2013-12-31 and my wife breastfeed our baby.
-To ease her task I developed this web app.
+I'm a father since 2013-12-31 and my wife breastfeed our baby.<br>
+To ease her task I developed this web app.<br>
 It was the occasion for me to play with AngularJS, Bootstrap, Yeoman and Google App Engine.
 
 Features
@@ -34,47 +34,60 @@ Installation
 
 You must have a working recent installation of :
 
-  * Maven
-  * node.js/npm
-  * Yeoman/Bower/Grunt
+ * Maven
+ * node.js/npm
+ * Yeoman/Bower/Grunt
 
 ### Steps :
 
-  1. Clone the repo
+ 1. Clone the repo
+
   ```
   git clone https://github.com/superbob/tetedotout.git
   ```
-  2. Step into web-app subfolder
+
+ 2. Step into web-app subfolder
+
   ```
   cd tetedotout/web-app
   ```
-  3. Build the web front end
+
+ 3. Build the web front end
+
   ```
   bower install
   grunt
   ```
-  4. Update the application id in `src/main/webapp/WEB-INF/appengine-web.xml` with *<your-own-application-id>*
-  5. Build the services and the final package
+
+ 4. Update the application id in `src/main/webapp/WEB-INF/appengine-web.xml` with *<your-own-application-id>*
+ 5. Build the services and the final package
+
   ```
   mvn package
   ```
-  6. Upload the app to the Google Cloud !
+
+ 6. Upload the app to the Google Cloud !
+
   ```
   mvn appengine:update
   ```
-  7. Follow the command line instructions
-  8. You are done !
-    * You can browse to *<your-own-application-id>*.appspot.com and see the result
+
+ 7. Follow the command line instructions
+ 8. You are done !
+  * You can browse to *<your-own-application-id>*.appspot.com and see the result
 
 Hack
 ----
 
-  1. Follow the above steps 1 to 5, then :
-  2. Run the devserver
+ 1. Follow the above steps 1 to 5, then :
+ 2. Run the devserver
+
   ```
   mvn appengine:devserver
   ```
-  3. (Optional) Run the grunt server
+
+ 3. (Optional) Run the grunt server
+
   ```
   grunt serve
   ```
