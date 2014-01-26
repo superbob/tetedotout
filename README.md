@@ -95,9 +95,9 @@ Hack
 If you want to play with REST services you only need the gae devserver (step 2) and browse to [localhost:8080](http://localhost:8080) to see the app.<br>
 The gae devserver is built in with hot deploy, it will update its content each time you 'mvn package'.
 
-If you want to play the web front end (AngularJS), you should use the grunt server and browse to [localhost:9000](http://localhost:9000) to see the app.
+If you want to play the web front end (AngularJS), you should use the grunt server (steps 2+3) and browse to [localhost:9000](http://localhost:9000) to see the app.
 The grunt server is configured with livereload and proxy to gae devserver for REST and user authentication calls.
-To ensure authentication is done right when using the grunt server, you should first browse to [localhost:9000/api/tete-log/](http://localhost:9000/api/tete-log/), make sure your authenticated, and then browse to [localhost:9000](localhost:9000).
+To ensure authentication is done right when using the grunt server, you should first browse to [localhost:9000/api/tete-log/](http://localhost:9000/api/tete-log/), make sure you're authenticated, and then browse to [localhost:9000](localhost:9000).
 
 TODO
 ----
@@ -112,15 +112,15 @@ My code is licensed under the Simplified BSD "2-Clause" License.
 Credits/Tools used
 ------------------
 
-Apache Maven
-Spring MVC
-Google App Engine (Web container + Datastore)
-Google AngularJS
-node.js
-Yeoman
-Bower
-Grunt
-yeoman angular generator
-grunt-connect-proxy task
-yeoman jangular generator (sample configuration of a Yeoman+Maven project and grunt-connect-proxy sample)
-yeoman jhipster generator (same as above)
+[Apache Maven](http://maven.apache.org/)<br>
+[Spring MVC](http://projects.spring.io/spring-framework/)<br>
+[Google App Engine (Web container + Datastore)](https://developers.google.com/appengine/)<br>
+[AngularJS](http://angularjs.org/)<br>
+[node.js](http://nodejs.org/)<br>
+[Yeoman](http://yeoman.io/)<br>
+[Grunt](http://gruntjs.com/)<br>
+[Bower](http://bower.io/)<br>
+[AngularJS generator](https://github.com/yeoman/generator-angular)<br>
+[grunt-connect-proxy](https://github.com/drewzboto/grunt-connect-proxy)<br>
+[generator-jangular](https://github.com/yakanet/generator-jangular) (sample configuration of a Yeoman+Maven project and grunt-connect-proxy sample)<br>
+[JHipster](http://jhipster.github.io/) (same as above)
