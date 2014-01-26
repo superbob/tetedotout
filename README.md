@@ -92,12 +92,12 @@ Hack
   grunt serve
   ```
 
-If you want to play with REST services you only need the gae devserver (step 2) and browse to [localhost:8080](localhost:8080) to see the app.<br>
+If you want to play with REST services you only need the gae devserver (step 2) and browse to [localhost:8080](http://localhost:8080) to see the app.<br>
 The gae devserver is built in with hot deploy, it will update its content each time you 'mvn package'.
 
-If you want to play the web front end (AngularJS), you should use the grunt server and browse to [localhost:9000](localhost:9000) to see the app.
+If you want to play the web front end (AngularJS), you should use the grunt server and browse to [localhost:9000](http://localhost:9000) to see the app.
 The grunt server is configured with livereload and proxy to gae devserver for REST and user authentication calls.
-To ensure authentication is done right when using the grunt server, you should first browse to [localhost:9000/api/tete-log/](localhost:9000/api/tete-log/), make sure your authenticated, and then browse to [localhost:9000](localhost:9000).
+To ensure authentication is done right when using the grunt server, you should first browse to [localhost:9000/api/tete-log/](http://localhost:9000/api/tete-log/), make sure your authenticated, and then browse to [localhost:9000](localhost:9000).
 
 TODO
 ----
