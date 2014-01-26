@@ -59,7 +59,7 @@ You must have a working recent installation of :
   grunt
   ```
 
- 4. Update the application id in `src/main/webapp/WEB-INF/appengine-web.xml` with '<your-own-application-id>'
+ 4. Update the application id in `src/main/webapp/WEB-INF/appengine-web.xml` with *&gt;your-own-application-id&lt;*
  5. Build the services and the final package
 
   ```
