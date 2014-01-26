@@ -114,7 +114,7 @@ Credits/Tools used
 
 [Apache Maven](http://maven.apache.org/)<br>
 [Spring MVC](http://projects.spring.io/spring-framework/)<br>
-[Google App Engine (Web container + Datastore)](https://developers.google.com/appengine/)<br>
+[Google App Engine](https://developers.google.com/appengine/) (Web container + Datastore)<br>
 [AngularJS](http://angularjs.org/)<br>
 [node.js](http://nodejs.org/)<br>
 [Yeoman](http://yeoman.io/)<br>
