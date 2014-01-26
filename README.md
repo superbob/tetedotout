@@ -59,7 +59,7 @@ You must have a working recent installation of :
   grunt
   ```
 
- 4. Update the application id in `src/main/webapp/WEB-INF/appengine-web.xml` with *<your-own-application-id>*
+ 4. Update the application id in `src/main/webapp/WEB-INF/appengine-web.xml` with '<your-own-application-id>'
  5. Build the services and the final package
 
   ```
@@ -74,7 +74,7 @@ You must have a working recent installation of :
 
  7. Follow the command line instructions
  8. You are done !
-  * You can browse to *<your-own-application-id>*.appspot.com and see the result
+  * You can browse to '<your-own-application-id>'.appspot.com and see the result
 
 Hack
 ----
