@@ -55,6 +55,7 @@ You must have a working recent installation of :
  3. Build the web front end
 
   ```
+  npm install
   bower install
   grunt
   ```
